@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Deterministic>false</Deterministic>
+		<ZipFileName>Amazon Rekognition (Black Belt Edition)</ZipFileName>
+	</PropertyGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="resources\AWSRekIcon.png">
+			<LogicalName>psn.PH.AWSRekIcon.png</LogicalName>
+		</EmbeddedResource>
+		<Content Include="resources\*.*">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="*"/>
+    <PackageReference Include="AWSSDK.Rekognition" Version="*"/>
+    <PackageReference Include="System.Drawing.Common" Version="*"/>
+		<PackageReference Include="OutSystems.ExternalLibraries.SDK" Version="*"/>
+	</ItemGroup>
+</Project>
